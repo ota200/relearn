@@ -4,14 +4,10 @@ const main = document.getElementById("div")
 
 
 function del(e){
-
-    //console.log("del")
     var m = String(e.target.id).replace("btn","")
-    //console.log(m)
 
 
     const element = document.getElementById("div"+m)
-    //console.log("element" + element + "div"+m)
     element.remove()
     num -= 1
 
@@ -20,27 +16,12 @@ function del(e){
 
     for ( var i = 0; i <= num; i +=1 ){
         
-        console.log(num)
-        console.log(divs.length)
-        console.log("start"+i)
-        console.log(divs[i])
         divs[i].id = "div"+i
-        console.log(i)
-
-        console.log("input"+m)
-
         divs[i].getElementsByTagName("input")[0].id = "input"+i
         divs[i].getElementsByTagName("input")[0].value = i
-        console.log(divs[i])
-
         divs[i].getElementsByTagName("button")[0].id = "btn"+i
 
     }
-
-    console.log(divs)
-
-
-
 
 }
 
